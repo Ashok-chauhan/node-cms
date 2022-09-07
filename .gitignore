@@ -1,0 +1,4 @@
+node_modules
+uploads/qr-codes
+logs/status.log
+.env

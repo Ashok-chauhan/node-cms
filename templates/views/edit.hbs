@@ -1,0 +1,32 @@
+{{>header}}
+<div class="container">
+
+<form method="POST" action="/edit" enctype="multipart/form-data">
+        <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" class="form-control" id="title" name="title" value="{{article.title}}">
+        <input type="hidden" class="form-control" id="id" name="id" value="{{article.id}}">
+        </div>
+        <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <input type="text" class="form-control" id="description" name="description" value="{{article.description}}">
+        </div>
+
+        <div class="mb-3">
+        <label for="artpic" class="form-label">Article picture</label>
+        <input class="form-control" type="file" id="artpics" name="artpics" >
+        </div>
+
+        <div class="mb-3">
+        <label for="body" class="form-label">Body</label>
+        <textarea class="form-control" id="body" name="body" placeholder="body" rows="3">{{article.body}}</textarea>
+        </div>
+
+ <button type="submit" class="btn btn-primary">Submit</button>
+ </form>
+</div>
+
+
+
+
+{{>footer}}

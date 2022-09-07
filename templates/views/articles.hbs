@@ -1,0 +1,37 @@
+{{>header}}
+<div class="container">
+
+
+
+<h3>{{this.title}} </h3>
+
+<table class="table table-success table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Title</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    {{#article}}
+    <tr>
+      <th scope="row">{{this.id}}</th>
+      <td>{{this.title}}</td>
+      <td><a href="/edit/{{this.id}}">Edit</a></td>
+      <td><a href="/delete/{{this.id}}">Delete</a></td>
+      
+    </tr>
+    {{/article}}
+  </tbody>
+</table>
+
+
+</div>
+
+
+
+
+{{>footer}}
