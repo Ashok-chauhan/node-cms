@@ -66,20 +66,6 @@ const connection = mysql.createConnection({
   database: process.env.DATABASE,
 });
 
-// const smtpTransport = nodemailer.createTransport({
-//   host: "email-smtp.us-west-2.amazonaws.com",
-//   port: 465,
-//   secure: true,
-//   auth: {
-//     user: "AKIAUIAZQITEAIX6COZ2",
-//     pass: "BIEEv7ZkxSZ7J7UOLg1scoxGJKBb2eeXfCYCeldQ8KFP",
-//   },
-//   tls: {
-//     rejectUnauthorized: false,
-//   },
-//   pool: false,
-// });
-
 const smtpTransport = nodemailer.createTransport({
   host: process.env.Smtp_host,
   port: process.env.Smtp_port,
