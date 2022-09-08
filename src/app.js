@@ -76,7 +76,8 @@ const smtpTransport = nodemailer.createTransport({
     pass: process.env.Smtp_auth_password,
   },
   tls: {
-    ciphers: "SSLv3",
+    //ciphers: "SSLv3",
+    rejectUnauthorized: false,
   },
   pool: process.env.Smtp_pool,
 });
@@ -237,6 +238,6 @@ app.get("/thankyou", function (req, res) {
   res.render("thankyou");
 });
 
-app.listen(3000, () => {
+app.listen(3000, "127.0.0.1", () => {
   console.log("listening on port 3000");
 });
